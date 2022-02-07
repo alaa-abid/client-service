@@ -23,7 +23,7 @@ public class TransferCtrl {
     public ResponseEntity<?> getTransferByReference(@PathVariable("reference") String reference){
         return (clientService.getTransferByReference(reference));
     }
-    @GetMapping("/MultiTransfers/client/{id}")
+    @GetMapping("/MultiTransfers/client")
     public ResponseEntity<?> getAllTransfers(@RequestHeader("id") Integer idClient){
         return (clientService.getAllTransfers(idClient));
     }
