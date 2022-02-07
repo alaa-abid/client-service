@@ -16,7 +16,7 @@ public class MultiTransfer {
 
     private LocalDateTime created_at = LocalDateTime .now();
     private LocalDateTime  ended_at = created_at.plusDays(10);
-    private Integer id_client=0;
+    private Integer id_client;
     private String sender_fname;
     private String sender_lname;
     private String sender_phnumber;

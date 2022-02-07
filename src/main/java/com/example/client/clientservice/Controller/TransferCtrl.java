@@ -23,8 +23,8 @@ public class TransferCtrl {
     public ResponseEntity<?> getTransferByReference(@PathVariable("reference") String reference){
         return (clientService.getTransferByReference(reference));
     }
-    @GetMapping("/MultiTransfers/client/{idClient}")
-    public ResponseEntity<?> getAllTransfers(@RequestHeader("idClient") Integer idClient){
+    @GetMapping("/MultiTransfers/client/{id}")
+    public ResponseEntity<?> getAllTransfers(@RequestHeader("id") Integer idClient){
         return (clientService.getAllTransfers(idClient));
     }
 
@@ -34,7 +34,7 @@ public class TransferCtrl {
     public ResponseEntity<?> createtransferClient(@Valid @RequestBody MultiTransfer multitransfer
             , @RequestHeader("id") Integer id){
 
-       multitransfer.setClient_id(id);
+       multitransfer.setId_client(id);
         clientService.VerifyAccount(id,multitransfer.getTotal_amount());
 
         return clientService.createMultitransferClient(multitransfer);
