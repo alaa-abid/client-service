@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: CLIENT-SERVICE
+
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone:  https://registry-microservice.herokuapp.com/eureka
+  instance:
+    preferIpAdress: true
