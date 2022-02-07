@@ -155,6 +155,6 @@ public class ClientServiceImpl implements ClientService {
         HttpHeaders headers = new HttpHeaders();
         headers.set("Accept","application/json");
         HttpEntity<?> entity = new HttpEntity<>(headers);
-        return restTemplate.exchange(transfer_rest_url+"/UniqueTransfer/return/"+reference+"?motif="+motif, HttpMethod.POST,entity,Object.class,1);
+        return restTemplate.exchange(transfer_rest_url+"/UniqueTransfer/return/"+reference+"?motif="+motif, HttpMethod.PUT,entity,Object.class,1);
     }
 }
